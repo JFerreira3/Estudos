@@ -4,6 +4,7 @@ import trataErros from './erros/funcoesErro.js';
 import { contaPalavras } from './index.js';
 import { montaSaidaArquivo } from './helpers.js';
 import { Command } from 'commander'; // biblioteca externa npm i commander
+import chalk from 'chalk'; // biblioteca para colorir as palavras do terminal
 
 const program = new Command(); // instancia da biblioteca 
 program
@@ -14,7 +15,7 @@ program
         const { texto, destino } = options;
 
         if (!texto || !destino) {
-            console.error('erro: favor inserir caminho de origem e destino');
+            console.error(chalk.red('erro: favor inserir caminho de origem e destino'));
             program.help();
             return;
         }
@@ -24,14 +25,21 @@ program
 
         try {
             processaArquivos(caminhoTexto, caminhoDestino);
-            console.log('Texto processado com sucesso!');
+            console.log(chalk.green('Texto processado com sucesso!'));
         } catch (error) {
             console.log('Ocorreu um erro no processamento', erro);
         }
     });
 
-// COMANDO PARA RODAR PROGRAMA, na pasta src: node cli.js ../arquivos/texto-web.txt ../resultados
+// COMANDO PARA RODAR PROGRAMA, na pasta src: node cli.js -t ../arquivos/texto-web.txt -d ../resultados
 program.parse();
+
+
+
+
+
+
+// ---------------- código inutilizado, servia para o RODAR PROJETO SEM O commander: ----------------------
 
 const caminhoArquivo = process.argv;
 // precess.argv passa instruções para o terminal que vão para dentro de um array
@@ -61,6 +69,11 @@ console.log(caminhoArquivo[2]);
 // RODAR COMANDO DENTRO DA PASTA (sem utilizar o commander) src:  node cli.js ../arquivos/texto-web.txt ../resultados
 const link = caminhoArquivo[2];
 const endereco = caminhoArquivo[3];
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 function processaArquivos(texto, destino) {
