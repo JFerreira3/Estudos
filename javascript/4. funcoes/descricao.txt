@@ -1,0 +1,9 @@
+Criando e executando funções
+Para saber mais: entendendo o return em funções
+A sintaxe de arrow functions
+Arrow function x function
+Entendendo callbacks e HOF
+Funções prontas para usarmos
+Entrada de dados pelo terminal
+Entendendo o require
+Desafio: criando um quiz

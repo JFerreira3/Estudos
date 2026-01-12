@@ -1,0 +1,3 @@
+Operadores aritiméticos
+Operadores de comparação (>, <, ==, <=, >=)
+Entendendo AND, OR e NOT (&&, ||, !)

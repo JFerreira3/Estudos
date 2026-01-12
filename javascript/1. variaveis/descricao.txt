@@ -1,0 +1,4 @@
+Criando variáveis e atualizando valores
+A diferença entre: var, let e const.
+Declaração de variáveis
+Identificando os tipos de variáveis

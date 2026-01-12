@@ -1,0 +1,6 @@
+Trabalhando com datas
+Operadores REST e spread
+Usando REST e spread com arrays
+A funcionalidade destructuring
+Explorando módulos em JavaScript
+datas, operadores e módulos
