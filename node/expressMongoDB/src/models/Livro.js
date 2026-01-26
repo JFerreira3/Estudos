@@ -6,7 +6,7 @@ const livroSchema = new mongoose.Schema({
     editora: { type: String },
     preco: { type: Number },
     paginas: { type: Number }
-}, { versionKey: false });
+}, { versionKey: false }); // ferramenta de versionamento do mongoose não utilizada
 
 const livro = mongoose.model("livros", livroSchema); // "livros" é a coleção criada no banco
 
